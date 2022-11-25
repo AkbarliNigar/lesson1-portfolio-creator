@@ -1,8 +1,12 @@
 :root{
-    --primary-black:#000;
+    --primary-black:#000000;
+    --primary-orange: #FF8A56;
+    --primary-grey:#666666;
 }
 
-
+*{
+    outline: 1px solid red
+}
 
 @import url('./reset.css');
 
@@ -13,11 +17,7 @@
 a{
 text-decoration: none;
 
-
 }
-
-
-
 
 html{
     font-size: 16px;
@@ -64,10 +64,100 @@ color: var(--primary-black);
     .fa-bars{
         display: flex;
         font-size: 32px;
+        cursor: pointer;
     }
 }
 
 
+/*introduction section (h1 i paraqrafi butonu alt alta getirmek ucun)*/
 
+.introduction {
+    padding-left: 112.5px;
+    padding-right: 112.5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.intro-left-side {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%; /*width*/
+    padding-top: 117px;
+    min-width: 715px;  /*minimum 715pxe qeder kichilsin*/
+}
+
+/*child selector*/
+.intro-left-side > h1 {
+    font-size: 72px;  /*pxllerin her birini rem e chevirmek lazimdir*/
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+
+.intro-left-side > h1 > span {
+    color:var(--primary-orange);
+   
+    
+    
+
+}
+
+.intro-left-side > p {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--primary-grey);
+   /* text-transform: uppercase; herfleri kicildir,capiatlize hamisni boyuk edir  .....  */
+
+}
+
+
+/*descendant selector - her birini sechir*/
+/*.intro-left-side h1 {
+
+} */
+
+
+
+.intro-right-side {
+    
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 70px;
+    min-width: 500px; /*minimum 500pxe qeder kichilsin*/
+}
+
+@media (max-width:1473px) and (min-width:768px) {
+    .intro-left-side{
+        flex-basis: 100%;
+        align-items:  center;
+        
+    }
+
+    .introduction {
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .intro-right-side{
+        justify-content: center;
+    }
+}
+@media(max-width:768px) {
+    .introduction {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .intro-left-side {
+        min-width: 400px;
+        text-align: center;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
 
 
