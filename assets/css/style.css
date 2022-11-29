@@ -2,11 +2,17 @@
     --primary-black:#000000;
     --primary-orange: #FF8A56;
     --primary-grey:#666666;
+    --primary-purple:#B16CEA;
+    --primary-white: #FFFFFF;
+
+
+
+
 }
 
-*{
+/**{
     outline: 1px solid red
-}
+}*/
 
 @import url('./reset.css');
 
@@ -161,3 +167,166 @@ color: var(--primary-black);
 }
 
 
+/*Trusted by section - trusted by yazisi*/
+.trusted-by-section h6 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;  /* 18/16=1,12rem*/
+
+}
+
+.trusted-by-section {
+    /* background-color: brown; */
+    padding: 32px 290px;
+
+
+    /* 32px yuxari asagi.   % sag sol */
+}
+
+
+
+.trusted-by-companies{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+/*.trusted-by-company:first-child:hover {
+    transform: scale(1.2);
+    transition:all .8s ease-in;
+}*/
+
+
+@media(max-width:768px) and (min-width:576px) {
+    .trusted-by-company:nth-child(odd) {
+        display: none;
+    }
+}
+
+@media(max-width:575px){
+    .trusted-by-company:not(:first-child){
+        display: none;
+    }
+}
+
+/* Serices section*/
+
+
+
+.services-section{
+    /* padding: 0 171px; */
+    padding: 32px 9%;
+}
+
+.services-section h6,
+.services-section  h1 {
+    text-align: center;
+
+}
+.services-section h6{
+    text-transform: uppercase;
+   /* letter :4px; deqiq bax letter spaceye*/
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    background-color: red;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: teal;
+    min-width: 260px;
+    padding: 20px;
+    width: 21%;
+    margin-bottom: 10px;
+}
+.service ul {
+    list-style-type: square;
+    font-weight: 700;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+
+
+/* PROJECT SECTION */
+/* gap: 10px;            /* yAZILARARASINDA BOSLUQ UCUN-GAP */
+/* align-items: center;      buton dartilmasin deye */
+
+.projects-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+}
+
+.projects-text h6{
+    color: var(--primary-purple);
+}
+
+.projects-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.View-all-projects{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.projects-card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.projects-card .card{
+    width: 486px;
+    height: 468px;
+    min-width: 200px;
+}
+
+.card .card-top{
+    width: 100%;
+    height: 305px;
+}
+
+.card .card-bottom img {
+    width: 100%;
+    height: 100%;
+}
+
+.card .card-bottom{
+    height: 163px;
+    background-color:#FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 10px;
+    
+}
+.card-bottom a {
+    color: var(--primary-black);
+}
+
+/* .card-bottom a img{
+    display: flex;
+    flex-direction: column;
+} */
+
+
+
+.View-all-projects button {
+    background-color: black;
+    color: var(--primary-white);
+    padding: 10px 12px;
+}
